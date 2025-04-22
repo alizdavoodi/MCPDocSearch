@@ -1,5 +1,8 @@
+import os
+import openai
 import sys  # Import sys for stderr
 from typing import List, Dict, Union
+
 
 # Import the shared mcp_server instance using absolute path
 from mcp_server.app import mcp_server
@@ -91,3 +94,4 @@ def search_documentation(
 # No need for register_tools function anymore, decorators handle it.
 # The manual __signature__ assignments are also removed as the decorator
 # should infer the schema from type hints and docstrings.
+
