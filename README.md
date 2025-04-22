@@ -35,7 +35,8 @@ This project provides a toolset to crawl websites, generate Markdown documentati
 
 This project uses [`uv`](https://github.com/astral-sh/uv) for dependency management and execution.
 
-1. **Install `uv`**: Follow the instructions on the [uv website](https://github.com/astral-sh/uv).
+1. **Install `uv`**: Follow the instructions on the [uv website](https://github.com/astral-sh/uv). for Linux Ubuntu users, ensure you run `sudo snap install astral-uv --classic` in your terminal in order to prevent errors like `Command 'uv' not found, but can be installed with:
+sudo snap install astral-uv`
 2. **Clone the repository:**
 
    ```bash
@@ -50,6 +51,9 @@ This project uses [`uv`](https://github.com/astral-sh/uv) for dependency managem
    ```
 
    This command creates a virtual environment (usually `.venv`) and installs all dependencies listed in `pyproject.toml`.
+
+
+
 
 ## Usage
 

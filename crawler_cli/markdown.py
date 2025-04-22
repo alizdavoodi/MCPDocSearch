@@ -41,8 +41,12 @@ def remove_links(html):
 class LinkRemovingMarkdownGenerator(DefaultMarkdownGenerator):
     """Custom markdown generator that removes links and nav elements before processing"""
 
-    def generate_markdown(self, cleaned_html, *args, **kwargs):
+    def generate_markdown(self, cleaned_html, source_url=None, *args, **kwargs):
         # Pre-process the HTML to remove links and nav elements
         cleaned_html = remove_links(cleaned_html)
+        markdown = super().generate_markdown(cleaned_html *args, **kwargs)
+        if source_url:
+            markdown = f"Source: {source_url}\n\n" + markdown
+        return markdown
         # Call the parent implementation with the modified HTML
-        return super().generate_markdown(cleaned_html, *args, **kwargs)
+        # return super().generate_markdown(cleaned_html, *args, **kwargs)
