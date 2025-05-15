@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/alizdavoodi-mcpdocsearch-badge.png)](https://mseep.ai/app/alizdavoodi-mcpdocsearch)
+
 # Documentation Crawler & MCP Server
 
 This project provides a toolset to crawl websites, generate Markdown documentation, and make that documentation searchable via a Model Context Protocol (MCP) server, designed for integration with tools like Cursor.
