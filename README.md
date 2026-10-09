@@ -31,6 +31,21 @@ This project provides a toolset to crawl websites, generate Markdown documentati
 3. **Load & Embed:** The server automatically loads, chunks, and embeds the content from the `.md` files in `./storage/`.
 4. **Query:** Use the MCP client (e.g., Cursor Agent) to interact with the server's tools (`list_documents`, `search_documentation`, etc.) to query the crawled content.
 
+## Optional single-page input
+
+The crawler is the right choice when you need linked documentation or a
+multi-page corpus. For a single public page, you can also obtain clean Markdown
+from [ReplyNodes](https://replynodes.com/) and place it in `storage/` for the
+same indexing and search workflow:
+
+```bash
+curl -sS https://md.replynodes.com/stripe.com > storage/stripe.com.md
+```
+
+This is complementary to the crawler: it provides a small, direct input path
+when you do not need to discover and crawl additional links. The endpoint
+returns clean Markdown for a public webpage.
+
 ## Setup
 
 This project uses [`uv`](https://github.com/astral-sh/uv) for dependency management and execution.
